@@ -6,7 +6,6 @@
 //
 
 import SwiftUI
-import PhotosUI
 import Firebase
 import FirebaseStorage
 import FirebaseFirestore
@@ -20,7 +19,7 @@ struct LoginView: View {
     @State private var createAccount: Bool = false
     @State private var showError: Bool = false
     @State private var errorMessage: String = ""
-    @State var isLoading: Bool = false
+    @State private var isLoading: Bool = false
 
     // MARK: User Default
     @AppStorage("log_status") private var logStatus: Bool = false

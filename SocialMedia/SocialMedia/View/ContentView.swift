@@ -9,10 +9,11 @@ import SwiftUI
 
 struct ContentView: View {
     @AppStorage("log_status") private var logStatus: Bool = false
+    
     var body: some View {
         // MARK: Redirecting User Based on Log Status
         if logStatus {
-            Text("Main View")
+            MainView()
         } else {
             LoginView()
         }

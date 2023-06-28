@@ -27,7 +27,7 @@ struct RegisterView: View {
     @State private var photoItem: PhotosPickerItem?
     @State private var showError: Bool = false
     @State private var errorMessage: String = ""
-    @State var isLoading: Bool = false
+    @State private var isLoading: Bool = false
 
     // MARK: UserDefaults
     @AppStorage("log_status") private var logStatus: Bool = false
@@ -216,6 +216,6 @@ extension RegisterView {
 
 struct RegisterView_Previews: PreviewProvider {
     static var previews: some View {
-        RegisterView()
+        ContentView()
     }
 }
