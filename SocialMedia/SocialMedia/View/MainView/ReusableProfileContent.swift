@@ -38,7 +38,7 @@ struct ReusableProfileContent: View {
                         if let bioLink = URL(string: user.userBioLink) {
                             Link(user.userBioLink, destination: bioLink)
                                 .font(.callout)
-                                .tint(.blue)
+                                .tint(.blue) 
                                 .lineLimit(1)
                         }
                     }
@@ -55,4 +55,3 @@ struct ReusableProfileContent: View {
         }
     }
 }
-
