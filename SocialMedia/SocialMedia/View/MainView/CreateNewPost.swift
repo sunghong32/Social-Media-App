@@ -69,6 +69,7 @@ struct CreateNewPost: View {
             }
         }
         .alert(errorMessage, isPresented: $showError, actions: {})
+        /// - Loading View
         .overlay {
             LoadingView(show: $isLoading)
         }
@@ -168,7 +169,7 @@ extension CreateNewPost {
                 let imageReferenceID = "\(userUID)\(Date())"
                 let storageRef = Storage.storage().reference().child("Post_Images").child(imageReferenceID)
                 if let postImageData {
-                    let _ = try await storageRef.putData(postImageData)
+                    let _ = try await storageRef.putDataAsync(postImageData)
                     let downloadURL = try await storageRef.downloadURL()
 
                     /// STEP 3: Create Post Object With Image Id and URL
@@ -187,10 +188,13 @@ extension CreateNewPost {
 
     func createDocumentAtFirebase(_ post: Post) async throws {
         /// - Writing Document to Firebase Firestore
-        let _ = try Firestore.firestore().collection("Posts").addDocument(from: post, completion: { error in
+        let doc = Firestore.firestore().collection("Posts").document()
+        let _ = try doc.setData(from: post, completion: { error in
             /// Post Successfully Stored at Firebase
             isLoading = false
-            onPost(post)
+            var updatedPost = post
+            updatedPost.id = doc.documentID
+            onPost(updatedPost)
             dismiss()
         })
     }
@@ -200,6 +204,7 @@ extension CreateNewPost {
         await MainActor.run(body: {
             errorMessage = error.localizedDescription
             showError.toggle()
+            isLoading = false
         })
     }
 }
