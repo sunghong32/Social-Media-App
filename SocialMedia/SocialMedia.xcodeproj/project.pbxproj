@@ -28,6 +28,7 @@
 		65A1607D2A491EFB00670B20 /* FirebaseAuth in Frameworks */ = {isa = PBXBuildFile; productRef = 65A1607C2A491EFB00670B20 /* FirebaseAuth */; };
 		65A160812A49202E00670B20 /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65A160802A49202E00670B20 /* LoginView.swift */; };
 		65A60BAD2A4EBCB400D06861 /* PostsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65A60BAC2A4EBCB400D06861 /* PostsView.swift */; };
+		65B4B91A2A5559360075E5E2 /* SearchUserView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65B4B9192A5559360075E5E2 /* SearchUserView.swift */; };
 		65EB5D482A528D84001A8A54 /* ReusablePostsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65EB5D472A528D84001A8A54 /* ReusablePostsView.swift */; };
 		65EB5D4A2A52958B001A8A54 /* PostCardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65EB5D492A52958B001A8A54 /* PostCardView.swift */; };
 /* End PBXBuildFile section */
@@ -50,6 +51,7 @@
 		65A160792A491E1300670B20 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		65A160802A49202E00670B20 /* LoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginView.swift; sourceTree = "<group>"; };
 		65A60BAC2A4EBCB400D06861 /* PostsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostsView.swift; sourceTree = "<group>"; };
+		65B4B9192A5559360075E5E2 /* SearchUserView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchUserView.swift; sourceTree = "<group>"; };
 		65EB5D472A528D84001A8A54 /* ReusablePostsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReusablePostsView.swift; sourceTree = "<group>"; };
 		65EB5D492A52958B001A8A54 /* PostCardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostCardView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -92,6 +94,7 @@
 				65EB5D4B2A55305D001A8A54 /* PostView */,
 				6577C9FC2A4C182600B107E7 /* CreateNewPost.swift */,
 				656139BA2A4A8A9B0022B871 /* MainView.swift */,
+				65B4B9192A5559360075E5E2 /* SearchUserView.swift */,
 			);
 			path = MainView;
 			sourceTree = "<group>";
@@ -280,6 +283,7 @@
 				65EB5D4A2A52958B001A8A54 /* PostCardView.swift in Sources */,
 				65A1606E2A491CBD00670B20 /* ContentView.swift in Sources */,
 				65A1606C2A491CBD00670B20 /* SocialMediaApp.swift in Sources */,
+				65B4B91A2A5559360075E5E2 /* SearchUserView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
